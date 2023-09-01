@@ -1,0 +1,33 @@
+name: api checks
+on: [push]
+jobs:
+    checks:
+        name: tests
+        runs-on: ubuntu-latest
+        steps:
+            - name: check out repository code
+              uses: actions/checkout@v3
+
+            - name: setup python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: "3.11"
+
+            - name: setup poetry
+              uses: Gr1N/setup-poetry@v8
+              with:
+                  poetry-version: "1.5.1"
+ 
+            - name: install dependencies
+              run: poetry install
+
+            - uses: foundry-rs/foundry-toolchain@v1
+              with:
+                version: nightly
+                cache: false
+
+            - name: install ape plugins
+              run: poetry run ape plugins install .
+
+            - name: run tests
+              run: make anvil-sepolia-fork & make test
