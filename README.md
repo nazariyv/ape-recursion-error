@@ -9,4 +9,4 @@ After installing poetry deps:
 
 You will notice everything goes through just fine.
 
-However, observer the CI actions on github, this very same test is failing.
+However, observe the CI actions on github, this very same test is failing.
