@@ -5,7 +5,7 @@ description = ""
 authors = ["nazariyv <hi@naz.ooo>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "ape_recursion_error"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

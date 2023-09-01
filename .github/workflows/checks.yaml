@@ -1,4 +1,4 @@
-name: api checks
+name: checks
 on: [push]
 jobs:
     checks:
