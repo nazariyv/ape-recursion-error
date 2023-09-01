@@ -29,5 +29,9 @@ jobs:
             - name: install ape plugins
               run: poetry run ape plugins install .
 
+            - name: populate env vars
+              run: |
+                echo "SEPOLIA_RPC_URL=${{ secrets.SEPOLIA_RPC_URL }}" >> ./.env
+
             - name: run tests
               run: make anvil-sepolia-fork & make test

@@ -1,6 +1,8 @@
 # ensures that the rule contents don't ger printed to stdout
 .SILENT:
 
+SEPOLIA_RPC_URL := $(shell grep "^SEPOLIA_RPC_URL=" .env | cut -d '=' -f 2-)
+
 anvil-sepolia-fork ::
 	anvil \
 	--fork-url="${SEPOLIA_RPC_URL}" \
