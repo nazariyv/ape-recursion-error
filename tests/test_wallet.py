@@ -1,0 +1,3 @@
+
+def test_poc(safe_wallets):
+    ...
