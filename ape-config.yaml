@@ -1,8 +1,6 @@
 name: ape-recursion-error
 
 plugins:
-  - name: foundry
-    version: "0.6.15"
   - name: etherscan
 
 default_ecosystem: ethereum

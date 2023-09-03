@@ -11,6 +11,7 @@ packages = [{include = "src"}]
 python = "^3.11"
 eth-ape = "0.6.19"
 pytest = "^7.4.0"
+ape-foundry = {git = "https://github.com/antazoey/ape-foundry.git", rev = "0b05dbe5a40f69c123a4ccf40009bd5162ed9744"}
 
 
 [build-system]
